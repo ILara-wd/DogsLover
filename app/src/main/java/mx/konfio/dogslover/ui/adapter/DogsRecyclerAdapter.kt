@@ -1,4 +1,4 @@
-package mx.konfio.dogslover
+package mx.konfio.dogslover.ui.adapter
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -8,10 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import mx.konfio.dogslover.core.data.DogsObject
+import mx.konfio.dogslover.R
+import mx.konfio.dogslover.data.entities.DogsEntity
 
 class DogsRecyclerAdapter(
-    private val dogList: MutableList<DogsObject>,
+    private val dogList: MutableList<DogsEntity>,
     private val mActivity: Activity
 ) : RecyclerView.Adapter<DogsRecyclerViewHolder>() {
 
