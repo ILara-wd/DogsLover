@@ -1,14 +1,14 @@
-package mx.konfio.dogslover.model
+package mx.konfio.dogslover.core.data
 
 import com.google.gson.annotations.SerializedName
 
 data class DogsObject(
     @SerializedName("dogName")
-    val breedName: String,
+    val dogName: String,
     @SerializedName("description")
     val description: String,
     @SerializedName("age")
-    val id: Int,
+    val age: Int,
     @SerializedName("url")
-    val image: String
+    val url: String
 )

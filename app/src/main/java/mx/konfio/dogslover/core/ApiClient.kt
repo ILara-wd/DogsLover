@@ -1,6 +1,6 @@
 package mx.konfio.dogslover.core
 
-import mx.konfio.dogslover.model.DogsObject
+import mx.konfio.dogslover.core.data.DogsObject
 import retrofit2.Response
 import retrofit2.http.GET
 
