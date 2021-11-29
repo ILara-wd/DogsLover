@@ -22,4 +22,6 @@ interface DogsDao {
     @Query("DELETE FROM Dogs")
     suspend fun deleteAll()
 
+    @Query("SELECT * FROM Dogs LIMIT 1")
+    suspend fun getLastDog(): DogsEntity
 }

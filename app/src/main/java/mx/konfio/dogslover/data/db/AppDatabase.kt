@@ -1,4 +1,4 @@
-package mx.konfio.dogslover.data
+package mx.konfio.dogslover.data.db
 
 import android.content.Context
 import androidx.room.Database

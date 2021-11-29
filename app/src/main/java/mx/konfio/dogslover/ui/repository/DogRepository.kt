@@ -3,10 +3,9 @@ package mx.konfio.dogslover.ui.repository
 import android.content.Context
 import mx.konfio.dogslover.core.DogService
 import mx.konfio.dogslover.core.data.DogsObject
-import mx.konfio.dogslover.data.AppDatabase
+import mx.konfio.dogslover.data.db.AppDatabase
 import mx.konfio.dogslover.data.dao.DogsDao
 import mx.konfio.dogslover.data.entities.DogsEntity
-import javax.inject.Inject
 
 class DogRepository (mContext: Context) {
 
