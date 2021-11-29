@@ -25,15 +25,14 @@ class DogsRecyclerAdapter(
     )
 
     override fun onBindViewHolder(holder: DogsRecyclerViewHolder, position: Int) {
-        val item = dogList[position]
+        val dogItem = dogList[position]
         holder.tvYear.text =
-            java.lang.String.format(mActivity.getString(R.string.text_dog_year), item.age)
-        holder.tvNameDog.text = item.dogName
-        holder.tvDescription.text = item.description
+            java.lang.String.format(mActivity.getString(R.string.text_dog_year), dogItem.age)
+        holder.tvNameDog.text = dogItem.dogName
+        holder.tvDescription.text = dogItem.description
         Glide
             .with(mActivity)
-            .load(item.url)
-            .centerCrop()
+            .load(dogItem.url)
             .into(holder.ivDog)
     }
 

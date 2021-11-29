@@ -16,6 +16,9 @@ interface DogsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveDogs(dogsEntity: DogsEntity)
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveAllDogs(dogsList: MutableList<DogsEntity>)
+
     @Query("DELETE FROM Dogs")
     suspend fun deleteAll()
 

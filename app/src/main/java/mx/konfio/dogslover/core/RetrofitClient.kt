@@ -24,13 +24,14 @@ object RetrofitClient {
         .readTimeout(100, TimeUnit.SECONDS)
         .build()
 
-    fun retrofit(): Retrofit =
+    fun retrofit(): ApiClient =
         Retrofit.Builder()
             .baseUrl("https://jsonblob.com/")
             .client(httpClient)
             .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
+            .create(ApiClient::class.java)
 }
 
 class HeaderInterceptor : Interceptor {

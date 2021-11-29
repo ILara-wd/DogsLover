@@ -3,9 +3,10 @@ package mx.konfio.dogslover.data.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import mx.konfio.dogslover.core.data.DogsObject
 
 @Entity(tableName = "Dogs")
-open class DogsEntity(
+class DogsEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     @ColumnInfo(name = "dogName")
@@ -16,4 +17,12 @@ open class DogsEntity(
     val age: Int,
     @ColumnInfo(name = "url")
     val url: String
-)
+) {
+    constructor(dogsObject: DogsObject) : this(
+        id = 0,
+        dogName = dogsObject.dogName,
+        description = dogsObject.description,
+        age = dogsObject.age,
+        url = dogsObject.url
+    )
+}

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import mx.konfio.dogslover.core.data.DogsObject
 import mx.konfio.dogslover.ui.adapter.DogsRecyclerAdapter
 import mx.konfio.dogslover.databinding.ActivityMainBinding
 import mx.konfio.dogslover.data.entities.DogsEntity
@@ -25,12 +26,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         observer()
     }
 
     private fun observer() {
         dogViewModel.getAllDogs()
-        dogViewModel.showAllDogs.observe(this, { showData(it) })
+        dogViewModel.showAllDogs.observe(this, {
+            if (it.size == 0) {
+                dogViewModel.getAllDogsRemote()
+            } else {
+                showData(it)
+            }
+        })
+        dogViewModel.showAllDogsRemote.observe(this, {
+            showData(it)
+        })
     }
 
     private fun showData(mutableList: MutableList<DogsEntity>) {

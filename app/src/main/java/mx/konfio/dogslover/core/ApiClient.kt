@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface ApiClient {
-    @GET("api/880188946124021760")
-    suspend fun getDogs(): Response<List<DogsObject>>
+    @GET("api/914615664132767744")
+    suspend fun getDogs(): Response<MutableList<DogsObject>>
 }

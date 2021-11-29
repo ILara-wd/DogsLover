@@ -3,4 +3,5 @@
     <string name="text_dog_year">Almost %d years</string>
     <string name="tv_description" >(Description)</string>
     <string name="tv_name_dog">Chief</string>
+    <string name="text_tv_title">Dogs We Love</string>
 </resources>
