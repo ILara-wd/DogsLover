@@ -1,4 +1,4 @@
-package mx.konfio.dogslover.data.db
+package mx.konfio.dogslover.db
 
 import android.content.Context
 import androidx.room.Room
@@ -6,10 +6,9 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import junit.framework.TestCase
 import kotlinx.coroutines.runBlocking
-import mx.konfio.dogslover.data.dao.DogsDao
-import mx.konfio.dogslover.data.entities.DogsEntity
-import org.hamcrest.CoreMatchers.isA
-import org.hamcrest.MatcherAssert.assertThat
+import mx.konfio.dogslover.db.dao.DogsDao
+import mx.konfio.dogslover.db.db.AppDatabase
+import mx.konfio.dogslover.db.entities.DogsEntity
 import org.junit.After
 import org.junit.Before
 import org.junit.Test

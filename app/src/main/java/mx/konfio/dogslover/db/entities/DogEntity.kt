@@ -1,4 +1,4 @@
-package mx.konfio.dogslover.data.entities
+package mx.konfio.dogslover.db.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import mx.konfio.dogslover.R
-import mx.konfio.dogslover.data.entities.DogsEntity
+import mx.konfio.dogslover.db.entities.DogsEntity
 
 class DogsRecyclerAdapter(
     private val dogList: MutableList<DogsEntity>,

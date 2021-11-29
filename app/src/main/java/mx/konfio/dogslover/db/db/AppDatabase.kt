@@ -1,11 +1,11 @@
-package mx.konfio.dogslover.data.db
+package mx.konfio.dogslover.db.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import mx.konfio.dogslover.data.dao.DogsDao
-import mx.konfio.dogslover.data.entities.DogsEntity
+import mx.konfio.dogslover.db.dao.DogsDao
+import mx.konfio.dogslover.db.entities.DogsEntity
 
 @Database(
     entities = [DogsEntity::class],

@@ -1,11 +1,11 @@
-package mx.konfio.dogslover.data.dao
+package mx.konfio.dogslover.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import mx.konfio.dogslover.data.entities.DogsEntity
+import mx.konfio.dogslover.db.entities.DogsEntity
 
 @Dao
 interface DogsDao {
