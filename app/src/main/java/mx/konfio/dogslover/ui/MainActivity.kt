@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 import mx.konfio.dogslover.core.data.DogsObject
 import mx.konfio.dogslover.ui.adapter.DogsRecyclerAdapter
 import mx.konfio.dogslover.databinding.ActivityMainBinding

@@ -6,8 +6,9 @@ import mx.konfio.dogslover.core.data.DogsObject
 import mx.konfio.dogslover.data.AppDatabase
 import mx.konfio.dogslover.data.dao.DogsDao
 import mx.konfio.dogslover.data.entities.DogsEntity
+import javax.inject.Inject
 
-class DogRepository(mContext: Context) {
+class DogRepository (mContext: Context) {
 
     private val dogsDao: DogsDao = AppDatabase.getDatabase(mContext).dogsEntityDao()
     private val api = DogService()

@@ -2,11 +2,10 @@ package mx.konfio.dogslover.ui.viewmodel
 
 import androidx.lifecycle.*
 import kotlinx.coroutines.launch
-import mx.konfio.dogslover.core.data.DogsObject
 import mx.konfio.dogslover.data.entities.DogsEntity
 import mx.konfio.dogslover.ui.repository.DogRepository
 
-class DogViewModel(
+class DogViewModel (
     private val repository: DogRepository
 ) : ViewModel() {
 
